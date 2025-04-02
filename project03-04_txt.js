@@ -20,6 +20,7 @@ let reviews = [
    "The latest version of Dance Off improves upon the 8th Edition only slightly; still is one of the best dance-style games on the market.",
 ];
 let reviewTitles = ["My Favorite Workout Game", "Poor Choreography", "Buggy with Poor Tech Support", "Nice Improvement"];
+
 reviewCode += "<caption>"+reviewTitles[i]+"</capion>";
 reviewCode += "<tr><th>By</th><td>"+reviewers[i]+"</td></tr>";
 reviewCode += "<tr><th>Review Date</th><td>"+reviewDates[i]+"</td></tr>";
@@ -36,21 +37,20 @@ function starImages()
       for (let i = 1; i <= stars; i++) 
       {
             imageText = "<img src = 'star.png' alt = 'star'>";
-            return imageText;
       }
-      
-
-      for (let i = 0; i < reviewers.length; i++) {
-            reviewCode =""; 
-            if (reviewType == "P") {
-                  reviewCode = "<table class = 'prime'>"
-            }
-            else if(reviewType == "N") {
-                  reviewCode = "<table class = 'new'>"
-            }
-            else {
-                  reviewCode = "<table>"
-            }
-      }
+      return imageText;
 }
 
+
+for (let i = 0; i < reviewers.length; i++) {
+      reviewCode =""; 
+      if (reviewType == "P") {
+            reviewCode = "<table class = 'prime'>"
+      }
+      else if(reviewType == "N") {
+            reviewCode = "<table class = 'new'>"
+      }
+      else {
+            reviewCode = "<table>"
+      }
+}
